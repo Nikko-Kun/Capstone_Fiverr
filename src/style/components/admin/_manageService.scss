@@ -1,0 +1,15 @@
+.manage-service {
+  @apply pt-[--pd-120] px-[--pd-32] bg-color-white-light-2 w-[100%] overflow-hidden;
+  .content {
+    @apply border border-color-white-light p-4 bg-color-white;
+    .group-btn {
+      @apply flex flex-wrap justify-between p-4;
+      input {
+        @apply w-[260px] rounded-lg p-2 bg-color-white-light-2 border;
+      }
+    }
+    .table-manage {
+      @apply pt-[--pd-32];
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.popular-service {
+  @apply max-w-screen-2xl px-[--pd-32] py-[--pd-40];
+  .slide-package {
+    @apply relative overflow-x-auto;
+    button {
+      @apply absolute z-[10];
+      &.left {
+        @apply top-[50%] left-0;
+      }
+      &.right {
+        @apply top-[50%] right-0;
+      }
+    }
+    .card-list {
+      @apply grid grid-cols-5 gap-6;
+      .card-item {
+        @apply cursor-pointer hover:opacity-[0.85] w-[240px] h-[345px];
+      }
+    }
+  }
+  h2 {
+    @apply pb-[--pd-24] text-font-32 font-bold text-color-black-light;
+  }
+}

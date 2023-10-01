@@ -1,0 +1,14 @@
+.profile {
+  @apply relative text-font-14 leading-[130%];
+  .content-top {
+    @apply bg-color-white border border-color-gray-2 p-[--pd-32] text-font-14 leading-[130%] mb-[--mg-40];
+    input {
+      @apply mb-[--mg-20];
+      
+    }
+  }
+  .content-bottom {
+    @extend .content-top ;
+  }
+
+}

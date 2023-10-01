@@ -1,0 +1,52 @@
+.business {
+  @apply bg-color-puple-dark text-color-white;
+  .business-content {
+    @apply px-[--pd-32] py-[--pd-48] flex;
+    .business-left {
+      @apply pr-[20%];
+      small {
+        @apply flex gap-4;
+        .new {
+          @apply bg-color-puple-light border-color-puple-light text-color-white;
+        }
+      }
+      @apply w-[50%];
+      h2 {
+        @apply text-font-30 font-semibold mt-[--mg-16];
+      }
+      p {
+        @apply text-font-18 leading-6 my-[--mg-12];
+        i {
+          @apply text-color-gray-light mr-[--mg-8] text-font-20;
+        }
+      }
+    }
+    .business-right {
+      @apply w-[50%];
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .business {
+    .business-content { 
+      @apply grid grid-cols-1;
+      .business-left, .business-right {
+        @apply w-[100%] mt-5;
+      }
+    }
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .business {
+    .business-content { 
+      @apply grid grid-cols-1;
+      .business-left, .business-right {
+        @apply w-[100%] mt-5;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.btn-primary {
+  @apply border-[1px] border-color-white py-[--pd-5] px-[--pd-16] hover:cursor-pointer bg-auto rounded-md text-color-white hover:bg-color-green-light hover:transition	hover:duration-700 cursor-pointer;
+}
+.btn-search {
+  @apply bg-color-black px-[--pd-12] py-[--pd-10] border-[1px] hover:bg-color-black-light rounded-r-md;
+  svg {
+    fill: #fff;
+  }
+}
+.btn-search-carousel {
+  @extend .btn-search;
+  @apply bg-color-green-light border-none hover:bg-color-green
+}
+
+.btn-popular {
+  @extend .btn-primary;
+  @apply rounded-lg hover:bg-color-white hover:text-color-gray-light;
+}
+
+.btn-slide {
+  @apply absolute top-[50%] z-30 flex items-center justify-center px-4 cursor-pointer rounded-[50%] bg-color-white w-[40px] h-[40px] leading-[40px] shadow-color-gray-light-2 shadow-lg;
+  &.left {
+    @apply left-[2%];
+    &.none-left {
+      @apply left-0 top-[20%] w-[25px] h-[25px] leading-[25px] p-0;
+    }
+  }
+  &.right {
+    @apply right-[2%];
+    &.none-right {
+      @apply right-[6%] top-[20%] w-[25px] h-[25px] leading-[25px] p-0;
+    }
+  }
+}
+
+.btn-join {
+  @extend .btn-primary;
+  @apply text-color-green-light border-color-green-light bg-color-white font-semibold hover:text-color-white;
+}
+
+.btn-create {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 43px;
+    min-width: 43px;
+    border-radius: 5px;
+    padding: 0 5px;
+    color: gray;
+    background: transparent;
+    border: 1px solid gray;
+    &:hover {
+        border: 1px solid gray;
+        background-color: white;
+    }
+    svg {
+        fill: #19a463;
+        width: 20px;
+        height: 20px;
+    }
+    
+}

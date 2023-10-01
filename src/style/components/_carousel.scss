@@ -1,0 +1,16 @@
+.carousel {
+  @apply bg-carousel1 h-[700px] bg-no-repeat relative z-0 bg-center bg-cover w-[100%];
+  .carousel-content {
+    @apply absolute top-[30%] left-[5%] text-color-white w-[50%] ;
+    h2 {
+      @apply text-font-48 font-semibold pb-[--pd-24];
+    }
+    .popular {
+      @apply pt-[--pd-24];
+      ul {
+        @apply flex justify-start items-center gap-4
+      }
+    }
+  }
+
+}

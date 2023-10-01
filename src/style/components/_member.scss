@@ -1,0 +1,107 @@
+.member-item {
+  @apply flex items-center;
+  .member-left {
+    @apply w-[50%] relative p-[--pd-48];
+    img {
+      @apply rounded-lg;
+    }
+    &:after {
+      @apply bg-btn_play;
+      background-size: 80px;
+      content: "";
+      display: inline-block;
+      height: 80px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 80px;
+      z-index: 0;
+    }
+  }
+  .member-right {
+    @apply w-[50%];
+    .author {
+      @apply flex items-center justify-start gap-4;
+      h5 {
+        @apply text-font-20;
+      }
+      img {
+        @apply w-[11%];
+      }
+      span {
+        @apply text-color-gray-light-2;
+      }
+    }
+    .qoute {
+      @apply pr-[5%];
+      i {
+        @apply text-font-32 text-color-green-dark font-ara;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .member-item {
+    .member-left {
+      @apply w-[50%] relative p-[--pd-10];
+      img {
+        @apply rounded-lg;
+      }
+      &:after {
+        @apply bg-btn_play;
+        background-size: 40px;
+        height: 40px;
+        width: 40px;
+      }
+    }
+    .member-right {
+      @apply w-[50%];
+      .author {
+        h5 {
+          @apply text-font-14;
+        }
+      }
+      .qoute {
+        @apply pr-[2%];
+        i {
+          @apply text-font-20 text-color-green-dark font-ara;
+        }
+      }
+    }
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .member-item {
+    .member-left {
+      @apply w-[50%] relative p-[--pd-10];
+      img {
+        @apply rounded-lg;
+      }
+      &:after {
+        @apply bg-btn_play;
+        background-size: 20px;
+        height: 20px;
+        width: 20px;
+      }
+    }
+    .member-right {
+      @apply w-[50%];
+      .author {
+        h5 {
+          @apply text-font-14;
+        }
+      }
+      .qoute {
+        @apply pr-[2%];
+        i {
+          @apply text-font-14 text-color-green-dark font-ara;
+        }
+      }
+    }
+  }
+}

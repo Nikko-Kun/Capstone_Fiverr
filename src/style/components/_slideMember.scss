@@ -1,0 +1,7 @@
+.slideMember {
+  @apply px-[--pd-32] py-[--pd-48];
+  .wapper {
+    @apply relative h-56 overflow-hidden rounded-lg md:h-96;
+  }
+}
+

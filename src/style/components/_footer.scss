@@ -1,0 +1,48 @@
+footer {
+  @apply text-center lg:text-left mx-[--mg-20] px-[--pd-32] pb-[--pd-24] pt-[--pd-64] mb-[--mg-8];
+  .footer-link {
+    @apply text-center md:text-left container py-[--pd-24];
+    .item-link {
+      @apply grid gap-8 md:grid-cols-2 lg:grid-cols-5;
+      .item-footer {
+        .title-item {
+          @apply mb-[--mg-16] flex justify-center font-semibold md:justify-start text-color-black-light;
+
+        }
+        .text-main {
+          @apply text-color-gray hover:underline underline-offset-2;
+        }
+      }
+    }
+  }
+  .bottom {
+    @apply flex items-center justify-center lg:justify-between py-[--pd-24];
+    .logo {
+      @apply flex items-center gap-2;
+      .fiverr-logo-footer {
+        @apply h-[23px] w-[72px];
+      }
+      .copyright {
+        @apply font-thin text-font-14 text-color-gray-light-2;
+      }
+    }
+    .social {
+      ul {
+        @apply flex justify-center gap-3 text-color-gray items-center;
+        li {
+          svg {
+            @apply fill-color-gray rounded-full hover:bg-color-white-light w-[30px] h-[30px] p-[5px];
+    
+          } 
+          button {
+            @apply rounded-md hover:bg-color-white-light py-[--pd-2] px-1
+          }   
+        }
+      }
+    }
+  }
+  .line-top {
+    @apply border-t-[1px] border-t-color-white-light;
+  }
+}
+

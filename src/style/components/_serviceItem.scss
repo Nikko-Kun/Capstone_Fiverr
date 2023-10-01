@@ -1,0 +1,33 @@
+.card {
+  .card-img {
+    @apply relative;
+    img {
+      @apply w-[100%] h-[345px] rounded-md;
+    }
+    .card-text { 
+      @apply absolute top-5 left-5 text-color-white;
+      p {
+        @apply text-font-14;
+      }
+      h3 {
+        @apply text-[24px] font-semibold relative z-10;
+      }
+    }
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-black);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 4px;
+      
+    }
+  }
+  &:hover {
+    @apply cursor-pointer opacity-[0.8];
+  }
+}

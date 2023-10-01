@@ -1,0 +1,623 @@
+:root {
+  --color-green-light: #1dbf73;
+  --color-green: #19a463;
+  --color-black: #222325;
+  --color-black-light: #404145;
+  --color-gray: #74767e;
+  --color-gray-light: #62646a;
+  --color-white: #fff;
+  --color-green-dark: #003912;
+  --color-puple-dark: #0d084d;
+  --color-puple: #1e1692;
+  --color-puple-light: #446ee7;
+  --color-red: rgb(120, 12, 12);
+  --color-yellow: rgb(159, 159, 7);
+  --font-main: 1rem;
+  --font-10: 0.625rem;
+  --font-14: 0.875rem;
+  --font-18: 1.125rem;
+  --font-20: 1.25rem;
+  --font-30: 1.875rem;
+  --font-32: 2rem;
+  --pd-1: 1px;
+  --pd-2: 2px;
+  --pd-5: 5px;
+  --pd-10: 0.625rem;
+  --pd-12: 0.75rem;
+  --pd-16: 1rem;
+  --pd-18: 1.125rem;
+  --pd-24: 1.5rem;
+  --pd-32: 2rem;
+  --pd-40: 2.5rem;
+  --pd-48: 3rem;
+  --pd-55: 3.45rem;
+  --pd-64: 4rem;
+  --pd-95: 5.95rem;
+  --pd-120: 7.5rem;
+  --pd-150: 9.35rem;
+  --pd-180: 11.25rem;
+  --mg-4: 4px;
+  --mg-8: 0.5rem;
+  --mg-12: 0.75rem;
+  --mg-14: 0.875rem;
+  --mg-16: 1rem;
+  --mg-20: 1.25rem;
+  --mg-40: 2.5rem;
+  --mg-96: 6rem;
+  --br-4: 4px;
+}
+
+body {
+  @apply font-ass text-color-gray-light;
+}
+
+.btn-primary, .btn-join, .btn-popular {
+  @apply border-[1px] border-color-white py-[--pd-5] px-[--pd-16] hover:cursor-pointer bg-auto rounded-md text-color-white hover:bg-color-green-light hover:transition	hover:duration-700 cursor-pointer;
+}
+
+.btn-search, .btn-search-carousel {
+  @apply bg-color-black px-[--pd-12] py-[--pd-10] border-[1px] hover:bg-color-black-light rounded-r-md;
+}
+.btn-search svg, .btn-search-carousel svg {
+  fill: #fff;
+}
+
+.btn-search-carousel {
+  @apply bg-color-green-light border-none hover:bg-color-green;
+}
+
+.btn-popular {
+  @apply rounded-lg hover:bg-color-white hover:text-color-gray-light;
+}
+
+.btn-slide {
+  @apply absolute top-[50%] z-30 flex items-center justify-center px-4 cursor-pointer rounded-[50%] bg-color-white w-[40px] h-[40px] leading-[40px] shadow-color-gray-light-2 shadow-lg;
+}
+.btn-slide.left {
+  @apply left-[2%];
+}
+.btn-slide.left.none-left {
+  @apply left-0 top-[20%] w-[25px] h-[25px] leading-[25px] p-0;
+}
+.btn-slide.right {
+  @apply right-[2%];
+}
+.btn-slide.right.none-right {
+  @apply right-[6%] top-[20%] w-[25px] h-[25px] leading-[25px] p-0;
+}
+
+.btn-join {
+  @apply text-color-green-light border-color-green-light bg-color-white font-semibold hover:text-color-white;
+}
+
+.btn-create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  min-width: 43px;
+  border-radius: 5px;
+  padding: 0 5px;
+  color: gray;
+  background: transparent;
+  border: 1px solid gray;
+}
+.btn-create:hover {
+  border: 1px solid gray;
+  background-color: white;
+}
+.btn-create svg {
+  fill: #19a463;
+  width: 20px;
+  height: 20px;
+}
+
+.search-header, .search-carousel {
+  @apply w-[450px] px-[--pd-12] py-[--pd-5] border-[1px] border-color-gray-light-2 rounded-l-md focus:border-color-black-light;
+}
+
+.search-carousel {
+  @apply border-none hover:border-none;
+}
+
+header {
+  @apply fixed w-[100%] z-50 bg-color-white flex flex-col justify-evenly py-[--pd-12] gap-4;
+}
+header .top {
+  @apply lg:flex justify-between items-center gap-6 container mx-auto md:grid md:grid-cols-2 xl:flex;
+}
+header .top ul {
+  @apply flex justify-evenly items-center gap-4;
+}
+header .top ul li {
+  @apply hover:text-color-green-light cursor-pointer;
+}
+header .top ul li.dif {
+  @apply text-color-puple hover:text-color-green-light cursor-pointer;
+}
+header .top .search {
+  @apply xl:block lg:block md:hidden sm:hidden;
+}
+header .bottom {
+  @apply h-[30px] border-t-[1px] border-t-color-white-light container mx-auto;
+}
+
+/* Header.css */
+/* Default styles for desktop */
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  header .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .search {
+    margin-top: 10px;
+  }
+  header .nav-link {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+  header .btn-join {
+    margin-top: 10px;
+  }
+}
+footer {
+  @apply text-center lg:text-left mx-[--mg-20] px-[--pd-32] pb-[--pd-24] pt-[--pd-64] mb-[--mg-8];
+}
+footer .footer-link {
+  @apply text-center md:text-left container py-[--pd-24];
+}
+footer .footer-link .item-link {
+  @apply grid gap-8 md:grid-cols-2 lg:grid-cols-5;
+}
+footer .footer-link .item-link .item-footer .title-item {
+  @apply mb-[--mg-16] flex justify-center font-semibold md:justify-start text-color-black-light;
+}
+footer .footer-link .item-link .item-footer .text-main {
+  @apply text-color-gray hover:underline underline-offset-2;
+}
+footer .bottom {
+  @apply flex items-center justify-center lg:justify-between py-[--pd-24];
+}
+footer .bottom .logo {
+  @apply flex items-center gap-2;
+}
+footer .bottom .logo .fiverr-logo-footer {
+  @apply h-[23px] w-[72px];
+}
+footer .bottom .logo .copyright {
+  @apply font-thin text-font-14 text-color-gray-light-2;
+}
+footer .bottom .social ul {
+  @apply flex justify-center gap-3 text-color-gray items-center;
+}
+footer .bottom .social ul li svg {
+  @apply fill-color-gray rounded-full hover:bg-color-white-light w-[30px] h-[30px] p-[5px];
+}
+footer .bottom .social ul li button {
+  @apply rounded-md hover:bg-color-white-light py-[--pd-2] px-1;
+}
+footer .line-top {
+  @apply border-t-[1px] border-t-color-white-light;
+}
+
+.carousel {
+  @apply bg-carousel1 h-[700px] bg-no-repeat relative z-0 bg-center bg-cover w-[100%];
+}
+.carousel .carousel-content {
+  @apply absolute top-[30%] left-[5%] text-color-white w-[50%];
+}
+.carousel .carousel-content h2 {
+  @apply text-font-48 font-semibold pb-[--pd-24];
+}
+.carousel .carousel-content .popular {
+  @apply pt-[--pd-24];
+}
+.carousel .carousel-content .popular ul {
+  @apply flex justify-start items-center gap-4;
+}
+
+.trust {
+  @apply bg-color-white-light-2 h-[100px];
+}
+.trust .trust-content {
+  @apply flex justify-between items-center w-[50%] mx-auto pt-[--pd-12];
+}
+.trust img {
+  @apply w-[60px] h-[60px];
+}
+.trust p {
+  @apply font-semibold text-color-gray-light-2;
+}
+
+.card .card-img {
+  @apply relative;
+}
+.card .card-img img {
+  @apply w-[100%] h-[345px] rounded-md;
+}
+.card .card-img .card-text {
+  @apply absolute top-5 left-5 text-color-white;
+}
+.card .card-img .card-text p {
+  @apply text-font-14;
+}
+.card .card-img .card-text h3 {
+  @apply text-[24px] font-semibold relative z-10;
+}
+.card .card-img:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 0.3;
+  border-radius: 4px;
+}
+.card:hover {
+  @apply cursor-pointer opacity-[0.8];
+}
+
+.popular-service {
+  @apply max-w-screen-2xl px-[--pd-32] py-[--pd-40];
+}
+.popular-service .slide-package {
+  @apply relative overflow-x-auto;
+}
+.popular-service .slide-package button {
+  @apply absolute z-[10];
+}
+.popular-service .slide-package button.left {
+  @apply top-[50%] left-0;
+}
+.popular-service .slide-package button.right {
+  @apply top-[50%] right-0;
+}
+.popular-service .slide-package .card-list {
+  @apply grid grid-cols-5 gap-6;
+}
+.popular-service .slide-package .card-list .card-item {
+  @apply cursor-pointer hover:opacity-[0.85] w-[240px] h-[345px];
+}
+.popular-service h2 {
+  @apply pb-[--pd-24] text-font-32 font-bold text-color-black-light;
+}
+
+.introduction {
+  @apply px-[--pd-32] bg-color-green-light-2;
+}
+.introduction .intro-content {
+  @apply py-[--pd-48] flex justify-between items-center;
+}
+.introduction .intro-content .intro-left {
+  @apply w-[50%] pr-[11%] pl-[--pd-16];
+}
+.introduction .intro-content .intro-left h2 {
+  @apply text-font-32 font-bold text-color-black pb-[--pd-12];
+}
+.introduction .intro-content .intro-left h3 {
+  @apply text-font-20 text-color-black font-semibold;
+}
+.introduction .intro-content .intro-left h3 i {
+  @apply text-color-gray;
+}
+.introduction .intro-content .intro-left p {
+  @apply text-font-18 leading-10;
+}
+.introduction .intro-content .intro-right {
+  @apply w-[50%] relative;
+}
+.introduction .intro-content .intro-right:after {
+  @apply bg-btn_play;
+  background-size: 80px;
+  content: "";
+  display: inline-block;
+  height: 80px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .introduction .intro-content {
+    @apply grid grid-cols-1;
+  }
+  .introduction .intro-content .intro-left, .introduction .intro-content .intro-right {
+    @apply w-[100%] mt-5;
+  }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .introduction .intro-content {
+    @apply grid grid-cols-1 mt-5;
+  }
+}
+.weGot {
+  @apply px-[--pd-32] py-[--pd-48];
+}
+.weGot .wegot-content h2 {
+  @apply text-font-32 text-color-black font-bold;
+}
+.weGot .wegot-content .list-got {
+  @apply grid grid-cols-5 items-center gap-5 pt-[--pd-24];
+}
+.weGot .wegot-content .list-got .item-got {
+  @apply flex flex-col items-center;
+}
+.weGot .wegot-content .list-got .item-got svg {
+  @apply w-[60px] h-[60px] relative;
+}
+.weGot .wegot-content .list-got .item-got svg:after {
+  border-bottom: 2px solid #c5c6c9;
+  content: "";
+  padding: 0 0 8px;
+  position: absolute;
+  right: 50%;
+  top: 45px;
+  transform: translateX(50%);
+  width: 48px;
+  height: 2px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .weGot .wegot-content .list-got {
+    @apply grid grid-cols-3;
+  }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .weGot .wegot-content .list-got {
+    @apply grid grid-cols-2;
+  }
+}
+.business {
+  @apply bg-color-puple-dark text-color-white;
+}
+.business .business-content {
+  @apply px-[--pd-32] py-[--pd-48] flex;
+}
+.business .business-content .business-left {
+  @apply pr-[20%];
+  @apply w-[50%];
+}
+.business .business-content .business-left small {
+  @apply flex gap-4;
+}
+.business .business-content .business-left small .new {
+  @apply bg-color-puple-light border-color-puple-light text-color-white;
+}
+.business .business-content .business-left h2 {
+  @apply text-font-30 font-semibold mt-[--mg-16];
+}
+.business .business-content .business-left p {
+  @apply text-font-18 leading-6 my-[--mg-12];
+}
+.business .business-content .business-left p i {
+  @apply text-color-gray-light mr-[--mg-8] text-font-20;
+}
+.business .business-content .business-right {
+  @apply w-[50%];
+}
+
+@media screen and (max-width: 992px) {
+  .business .business-content {
+    @apply grid grid-cols-1;
+  }
+  .business .business-content .business-left, .business .business-content .business-right {
+    @apply w-[100%] mt-5;
+  }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .business .business-content {
+    @apply grid grid-cols-1;
+  }
+  .business .business-content .business-left, .business .business-content .business-right {
+    @apply w-[100%] mt-5;
+  }
+}
+.member-item {
+  @apply flex items-center;
+}
+.member-item .member-left {
+  @apply w-[50%] relative p-[--pd-48];
+}
+.member-item .member-left img {
+  @apply rounded-lg;
+}
+.member-item .member-left:after {
+  @apply bg-btn_play;
+  background-size: 80px;
+  content: "";
+  display: inline-block;
+  height: 80px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  z-index: 0;
+}
+.member-item .member-right {
+  @apply w-[50%];
+}
+.member-item .member-right .author {
+  @apply flex items-center justify-start gap-4;
+}
+.member-item .member-right .author h5 {
+  @apply text-font-20;
+}
+.member-item .member-right .author img {
+  @apply w-[11%];
+}
+.member-item .member-right .author span {
+  @apply text-color-gray-light-2;
+}
+.member-item .member-right .qoute {
+  @apply pr-[5%];
+}
+.member-item .member-right .qoute i {
+  @apply text-font-32 text-color-green-dark font-ara;
+}
+
+@media screen and (max-width: 992px) {
+  .member-item .member-left {
+    @apply w-[50%] relative p-[--pd-10];
+  }
+  .member-item .member-left img {
+    @apply rounded-lg;
+  }
+  .member-item .member-left:after {
+    @apply bg-btn_play;
+    background-size: 40px;
+    height: 40px;
+    width: 40px;
+  }
+  .member-item .member-right {
+    @apply w-[50%];
+  }
+  .member-item .member-right .author h5 {
+    @apply text-font-14;
+  }
+  .member-item .member-right .qoute {
+    @apply pr-[2%];
+  }
+  .member-item .member-right .qoute i {
+    @apply text-font-20 text-color-green-dark font-ara;
+  }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .member-item .member-left {
+    @apply w-[50%] relative p-[--pd-10];
+  }
+  .member-item .member-left img {
+    @apply rounded-lg;
+  }
+  .member-item .member-left:after {
+    @apply bg-btn_play;
+    background-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+  .member-item .member-right {
+    @apply w-[50%];
+  }
+  .member-item .member-right .author h5 {
+    @apply text-font-14;
+  }
+  .member-item .member-right .qoute {
+    @apply pr-[2%];
+  }
+  .member-item .member-right .qoute i {
+    @apply text-font-14 text-color-green-dark font-ara;
+  }
+}
+.slideMember {
+  @apply px-[--pd-32] py-[--pd-48];
+}
+.slideMember .wapper {
+  @apply relative h-56 overflow-hidden rounded-lg md:h-96;
+}
+
+.workNav {
+  @apply relative pt-2;
+}
+.workNav .title {
+  @apply relative;
+}
+.workNav .title:after {
+  content: "";
+  background-color: var(--color-green);
+  width: 0%;
+  height: 2px;
+  display: inline-block;
+  position: absolute;
+  bottom: -5px;
+}
+.workNav .title .collape-nav {
+  @apply bg-color-white px-[--pd-16] absolute top-5 w-[300%] opacity-0 h-[200px] hidden pt-[--pd-32];
+}
+.workNav .title .collape-nav .subGroup h5 {
+  @apply font-semibold;
+}
+.workNav .title .collape-nav .subGroup ul {
+  @apply pt-2;
+}
+.workNav .title .collape-nav .subGroup ul li {
+  @apply py-1 cursor-pointer;
+}
+.workNav .title .collape-nav .subGroup ul li:hover {
+  @apply underline;
+}
+.workNav .title:hover {
+  @apply cursor-pointer;
+}
+.workNav .title:hover::after {
+  @apply w-[90%];
+}
+.workNav .title:hover .collape-nav {
+  @apply opacity-[0] grid grid-cols-2;
+}
+.workNav .title:hover .collape-nav.active {
+  @apply opacity-[1] grid grid-cols-2;
+}
+
+.slide-service {
+  @apply px-[--pd-32] py-[--pd-48];
+}
+.slide-service .wapper {
+  @apply relative overflow-hidden rounded-lg items-center;
+}
+
+.profile {
+  @apply relative text-font-14 leading-[130%];
+}
+.profile .content-top, .profile .content-bottom {
+  @apply bg-color-white border border-color-gray-2 p-[--pd-32] text-font-14 leading-[130%] mb-[--mg-40];
+}
+.profile .content-top input, .profile .content-bottom input {
+  @apply mb-[--mg-20];
+}
+.user-tab {
+  @apply pt-[--pd-180] bg-color-gray-1;
+}
+.user-tab .tab-content {
+  @apply w-[90%] mx-auto flex gap-6 flex-row py-[--pd-32];
+}
+.user-tab .tab-content .user-profile {
+  @apply w-[35%];
+}
+.user-tab .tab-content .user-order {
+  @apply w-[65%] bg-color-white;
+}
+.user-tab .tab-content .user-order .no-item {
+  @apply flex flex-col items-center gap-6 py-[--pd-32];
+}
+.user-tab .tab-content .user-order p {
+  @apply font-semibold;
+}
+
+.manage-service {
+  @apply pt-[--pd-120] px-[--pd-32] bg-color-white-light-2 w-[100%] overflow-hidden;
+}
+.manage-service .content {
+  @apply border border-color-white-light p-4 bg-color-white;
+}
+.manage-service .content .group-btn {
+  @apply flex flex-wrap justify-between p-4;
+}
+.manage-service .content .group-btn input {
+  @apply w-[260px] rounded-lg p-2 bg-color-white-light-2 border;
+}
+.manage-service .content .table-manage {
+  @apply pt-[--pd-32];
+}/*# sourceMappingURL=style.css.map */

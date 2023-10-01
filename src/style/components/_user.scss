@@ -1,0 +1,18 @@
+.user-tab {
+  @apply pt-[--pd-180] bg-color-gray-1;
+  .tab-content {
+    @apply  w-[90%] mx-auto flex gap-6 flex-row py-[--pd-32];
+    .user-profile {
+      @apply w-[35%];
+    }
+    .user-order {
+      @apply w-[65%] bg-color-white;
+      .no-item {
+        @apply flex flex-col items-center gap-6 py-[--pd-32];
+      }
+      p {
+        @apply font-semibold;
+      }
+    }
+  }
+}

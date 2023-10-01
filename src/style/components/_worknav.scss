@@ -1,0 +1,44 @@
+.workNav {
+  @apply relative pt-2;
+  .title {
+    @apply relative;
+    &:after {
+      content: "";
+      background-color: var(--color-green);
+      width: 0%;
+      height: 2px;
+      display: inline-block;
+      position: absolute;
+      bottom: -5px;
+    }
+    .collape-nav {
+      @apply bg-color-white px-[--pd-16] absolute top-5 w-[300%] opacity-0 h-[200px] hidden pt-[--pd-32];
+      .subGroup {
+        h5 {
+          @apply font-semibold;
+        }
+        ul {
+          @apply pt-2;
+          li {
+            @apply py-1 cursor-pointer;
+            &:hover {
+              @apply underline;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      @apply cursor-pointer;
+      &::after {
+        @apply w-[90%];
+      }
+      .collape-nav {
+        @apply opacity-[0] grid grid-cols-2;
+        &.active {
+          @apply opacity-[1] grid grid-cols-2;
+        }
+      }
+    }
+  }
+}
