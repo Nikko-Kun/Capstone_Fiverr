@@ -6,7 +6,7 @@ import { RootState, useAppDispatch } from "../../store";
 import { quanLyAuthActions } from "../../store/quanLyAuth/slice";
 import { getMenuTypeWork } from "../../store/quanLyCongViec/thunkAction";
 import SliderMenu from "../../components/SliderMenu";
-// import css from "./header.module.scss";
+
 
 const Header = () => {
   const { auth } = useSelector((state: RootState) => state.quanLyAuth);
