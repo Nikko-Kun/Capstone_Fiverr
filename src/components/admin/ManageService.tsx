@@ -11,7 +11,7 @@ import {
 } from "../../react-app-env";
 import { useSelector } from "react-redux";
 import EyeIcon from "./icons/eye";
-import InputForm from "../core/InputForm";
+import InputForm from "../inputForm/InputForm";
 import { useForm } from "react-hook-form";
 import { quanLyCongViecService } from "../../services/quanLyCongViec.service";
 import { SaveIcon } from "./icons/save";

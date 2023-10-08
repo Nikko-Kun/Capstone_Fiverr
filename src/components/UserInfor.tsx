@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../redux/config-store";
 import { useForm } from "react-hook-form";
-import InputForm from "./core/InputForm";
+import InputForm from "./inputForm/InputForm";
 import { Checkbox, message } from "antd";
 import { updateUser } from "../redux/quanLyAuth/thunkAction";
 import { CheckboxChangeEvent } from "antd/es/checkbox";

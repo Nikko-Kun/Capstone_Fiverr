@@ -9,7 +9,7 @@ import { useForm } from "react-hook-form";
 import { getListUser } from "../../redux/quanLyAuth/thunkAction";
 import { quanLyAuthService } from "../../services/quanLyAuth.service";
 import clsx from "clsx";
-import InputForm from "../core/InputForm";
+import InputForm from "../inputForm/InputForm";
 import { SaveIcon } from "./icons/save";
 import { Checkbox } from "antd";
 import { CheckboxChangeEvent } from "antd/es/checkbox";

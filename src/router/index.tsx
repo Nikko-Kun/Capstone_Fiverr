@@ -1,6 +1,6 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
-import MainLayout from "../layout/MainLayout";
+import MainLayout from "../templates/admin/MainLayout";
 import Home from "../pages/home/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
@@ -10,7 +10,7 @@ import Login from "../pages/login/Login";
 import JobTypeDetail from "../pages/detail/JobTypeDetail";
 import JobDetail from "../pages/detail/JobDetail";
 import User from "../components/User";
-import AdminLayout from "../layout/AdminLayout";
+import AdminLayout from "../templates/admin/AdminLayout";
 import ManageWork from "../components/admin/ManageWork";
 import ManageService from "../components/admin/ManageService";
 import ManageUser from "../components/admin/ManageUser";

@@ -1,5 +1,5 @@
 import React from "react";
-import FormSearch from "./core/FormSearch";
+import FormSearch from "./formSearch/FormSearch";
 
 type Props = {};
 

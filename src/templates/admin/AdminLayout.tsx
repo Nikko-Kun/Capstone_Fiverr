@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import HeaderAdmin from "../components/admin/HeaderAdmin";
-import Navbar from "../components/admin/Navbar";
+import HeaderAdmin from "../../components/admin/HeaderAdmin";
+import Navbar from "../../components/admin/Navbar";
 
 type Props = {};
 

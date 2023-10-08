@@ -11,7 +11,7 @@ import Pagination from "./pagination/Pagination";
 import clsx from "clsx";
 import { useForm } from "react-hook-form";
 import { SaveIcon } from "./icons/save";
-import InputForm from "../core/InputForm";
+import InputForm from "../inputForm/InputForm";
 import { quanLyCongViecService } from "../../services/quanLyCongViec.service";
 import EyeIcon from "./icons/eye";
 

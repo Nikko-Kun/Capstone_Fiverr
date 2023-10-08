@@ -11,9 +11,9 @@ import { TrashIcon } from "./icons/trash";
 import { quanLyCongViecService } from "../../services/quanLyCongViec.service";
 import clsx from "clsx";
 import { SaveIcon } from "./icons/save";
-import InputForm from "../core/InputForm";
+import InputForm from "../inputForm/InputForm";
 import { useForm } from "react-hook-form";
-import TextArea from "../core/TextArea";
+import TextArea from "../textArea/TextArea";
 import EyeIcon from "./icons/eye";
 // 
 type Props = {};

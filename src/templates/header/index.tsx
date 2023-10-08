@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import FormSearch from "../../components/core/FormSearch";
+import FormSearch from "../../components/formSearch/FormSearch";
 import { useSelector } from "react-redux";
 import { NavLink, Navigate, useNavigate } from "react-router-dom";
 import { RootState, useAppDispatch } from "../../redux/config-store";
