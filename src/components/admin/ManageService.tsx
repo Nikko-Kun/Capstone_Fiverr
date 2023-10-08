@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { TrashIcon } from "./icons/trash";
 import { PencilIcon } from "./icons/pencil";
 import { CreateItem } from "./button/CreateItem";
-import { RootState, useAppDispatch } from "../../store";
-import { getHireWork } from "../../store/quanLyCongViec/thunkAction";
+import { RootState, useAppDispatch } from "../../redux/config-store";
+import { getHireWork } from "../../redux/quanLyCongViec/thunkAction";
 import {
   GetCongViecResponse,
   QueryDividePage,

@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../store";
+import { RootState, useAppDispatch } from "../redux/config-store";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { ThueCongViecResponse } from "../react-app-env";
 import { useForm } from "react-hook-form";
-import { layChiTietCongViec } from "../store/quanLyCongViec/thunkAction";
+import { layChiTietCongViec } from "../redux/quanLyCongViec/thunkAction";
 import { quanLyCongViecService } from "../services/quanLyCongViec.service";
 
 const Checkout = () => {

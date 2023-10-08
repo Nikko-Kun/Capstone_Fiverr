@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../../store";
-import { getWork } from "../../store/quanLyCongViec/thunkAction";
+import { RootState, useAppDispatch } from "../../redux/config-store";
+import { getWork } from "../../redux/quanLyCongViec/thunkAction";
 import { GetCongViecResponse, QueryDividePage } from "../../react-app-env";
 import Pagination from "./pagination/Pagination";
 import InputSearch from "./input/InputSearch";

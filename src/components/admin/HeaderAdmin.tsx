@@ -2,8 +2,8 @@ import clsx from "clsx";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import { RootState } from "../../store";
-import { quanLyAuthActions } from "../../store/quanLyAuth/slice";
+import { RootState } from "../../redux/config-store";
+import { quanLyAuthActions } from "../../redux/quanLyAuth/slice";
 import { useDispatch } from "react-redux";
 
 type Props = {};

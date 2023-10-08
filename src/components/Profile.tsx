@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../store";
+import { RootState, useAppDispatch } from "../redux/config-store";
 import UserInfor from "./UserInfor";
 import clsx from "clsx";
-import { uploadAvatar } from "../store/quanLyAuth/thunkAction";
+import { uploadAvatar } from "../redux/quanLyAuth/thunkAction";
 
 type Props = {};
 

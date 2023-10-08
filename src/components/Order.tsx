@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { RootState, useAppDispatch } from "../store";
+import { RootState, useAppDispatch } from "../redux/config-store";
 import { useSelector } from "react-redux";
-import { getHireWorkOfUser } from "../store/quanLyCongViec/thunkAction";
+import { getHireWorkOfUser } from "../redux/quanLyCongViec/thunkAction";
 import { HireWorkOfUserResponse } from "../react-app-env";
 
 type Props = {};

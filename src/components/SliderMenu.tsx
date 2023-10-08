@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { RootState, useAppDispatch } from "../store";
+import { RootState, useAppDispatch } from "../redux/config-store";
 import { useSelector } from "react-redux";
-import { getMenuTypeWork } from "../store/quanLyCongViec/thunkAction";
+import { getMenuTypeWork } from "../redux/quanLyCongViec/thunkAction";
 import { MenuTypeWork } from "../react-app-env";
 import { NavLink } from "react-router-dom";
 import WorkNav from "./WorkNav";

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { GetCongViecResponse } from "../react-app-env";
 import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../store";
-import { layDanhSachCongViec } from "../store/quanLyCongViec/thunkAction";
+import { RootState, useAppDispatch } from "../redux/config-store";
+import { layDanhSachCongViec } from "../redux/quanLyCongViec/thunkAction";
 import CongViecCard from "../components/CongViecCard";
 
 const CongViecList = () => {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../store";
+import { RootState, useAppDispatch } from "../redux/config-store";
 import { GroupDetailTypeWork } from "../react-app-env";
-import { getDetailTypeWork } from "../store/quanLyCongViec/thunkAction";
+import { getDetailTypeWork } from "../redux/quanLyCongViec/thunkAction";
 import ServiceItem from "./ServiceItem";
 import { NavLink } from "react-router-dom";
 

@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import FormSearch from "../../components/core/FormSearch";
 import { useSelector } from "react-redux";
 import { NavLink, Navigate, useNavigate } from "react-router-dom";
-import { RootState, useAppDispatch } from "../../store";
-import { quanLyAuthActions } from "../../store/quanLyAuth/slice";
-import { getMenuTypeWork } from "../../store/quanLyCongViec/thunkAction";
+import { RootState, useAppDispatch } from "../../redux/config-store";
+import { quanLyAuthActions } from "../../redux/quanLyAuth/slice";
+import { getMenuTypeWork } from "../../redux/quanLyCongViec/thunkAction";
 import SliderMenu from "../../components/SliderMenu";
 
 

@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../store";
+import { RootState, useAppDispatch } from "../redux/config-store";
 import { useForm } from "react-hook-form";
 import InputForm from "./core/InputForm";
 import { Checkbox, message } from "antd";
-import { updateUser } from "../store/quanLyAuth/thunkAction";
+import { updateUser } from "../redux/quanLyAuth/thunkAction";
 import { CheckboxChangeEvent } from "antd/es/checkbox";
 
 type Props = {};

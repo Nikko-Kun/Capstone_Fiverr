@@ -3,8 +3,8 @@ import Profile from "./Profile";
 import NoItem from "./NoItem";
 import Order from "./Order";
 import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../store";
-import { getHireWorkOfUser } from "../store/quanLyCongViec/thunkAction";
+import { RootState, useAppDispatch } from "../redux/config-store";
+import { getHireWorkOfUser } from "../redux/quanLyCongViec/thunkAction";
 
 type Props = {};
 
